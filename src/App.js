@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Palette />
+        <Palette selected="red" />
         <Counter value={0} color="red" />
         <WaitingList />
       </div>

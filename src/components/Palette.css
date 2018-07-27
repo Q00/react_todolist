@@ -15,17 +15,23 @@
   display: flex;
 }
 
-.Palette .PaletteSquare {
+.Palette .PaletteItem {
+  border-radius: 1rem;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   border: 2px solid white;
+  opacity: 0.7;
 }
 
-.Palette .PaletteSquare:hover {
+.Palette .PaletteItem:hover {
   opacity: 0.9;
 }
 
-.Palette .PaletteSquare+.PaletteSquare {
+.Palette .PaletteItem.active {
+  opacity: 1;
+}
+
+.Palette .PaletteItem+.PaletteItem {
   margin-left: 0.5rem;
 }

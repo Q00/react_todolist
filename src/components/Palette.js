@@ -3,22 +3,24 @@ import './Palette.css';
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-const PaletteSquare = ({ color, onClick }) => {
+const PaletteItem = ({ color, active, onClick }) => {
   return (
     <div
-      className="PaletteSquare"
+      className={`PaletteItem ${active ? 'active' : ''}`}
       style={{ backgroundColor: color }}
       onClick={onClick}
     />
   );
 };
 
-const Palette = () => {
+const Palette = ({ selected }) => {
   return (
     <div className="Palette">
       <h2>색깔을 골라골라</h2>
       <div className="colors">
-        {colors.map(color => <PaletteSquare color={color} key={color} />)}
+        {colors.map(color => (
+          <PaletteItem color={color} key={color} active={selected === color} />
+        ))}
       </div>
     </div>
   );
