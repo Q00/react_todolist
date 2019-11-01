@@ -1,7 +1,7 @@
 .WaitingList {
   margin-top: 1rem;
   border: 1px solid black;
-  width: 19rem;
+  width: 20rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   border: 1px solid black;
 }
 
-.WaitingList ul li+li {
+.WaitingList ul li + li {
   border-top: none;
 }
 
