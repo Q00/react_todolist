@@ -8,8 +8,8 @@ const WaitingItem = ({ text, entered, color, onEnter, onLeave }) => {
         <span style={{ color }}>{`${text}`}</span>
       </div>
       <div className="buttons">
-        <button onClick={onEnter}>입장</button>
-        <button onClick={onLeave}>나감</button>
+        <button onClick={onEnter}>완료</button>
+        <button onClick={onLeave}>해결</button>
       </div>
     </li>
   );
@@ -17,7 +17,6 @@ const WaitingItem = ({ text, entered, color, onEnter, onLeave }) => {
 
 const WaitingList = ({
   input, // **** 추가됨
-  color,
   waitingList,
   onChange, // **** 추가됨
   onSubmit, // **** 추가됨
@@ -41,7 +40,7 @@ const WaitingList = ({
       <h2>Todo List</h2>
       {/* form 과 input 에 이벤트 및 값 설정 */}
       <form onSubmit={onSubmit}>
-        <input type="hidden" value={color} />
+        {/* <input type="hidden" value={color} /> */}
         <input value={input} onChange={onChange} />
         <button>등록</button>
       </form>
